@@ -12,6 +12,9 @@ const app = (0, express_1.default)();
 app.use(body_parser_1.default.json());
 app.use((0, cors_1.default)());
 (0, routes_1.default)(app);
+app.get("/", (req, res) => {
+    res.send("hello");
+});
 app.listen(PORT, () => {
     console.log(`App is listening on port ${PORT}`);
 });
