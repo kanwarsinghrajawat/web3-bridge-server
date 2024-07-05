@@ -10,6 +10,10 @@ app.use(cors());
 
 routes(app);
 
+app.get("/", (req, res) => {
+  res.send("hello");
+});
+
 app.listen(PORT, () => {
   console.log(`App is listening on port ${PORT}`);
 });
